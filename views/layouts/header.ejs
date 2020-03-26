@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title><%= title %></title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/home.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- <style>
+            * {
+              box-sizing: border-box;
+            }
+            
+            body {
+              font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            /* Float four columns side by side */
+            .column {
+              float: left;
+              width: 25%;
+              padding: 0 10px;
+            }
+            
+            /* Remove extra left and right margins, due to padding */
+            .row {margin: 0 -5px;}
+            
+            /* Clear floats after the columns */
+            .row:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+            
+            /* Responsive columns */
+            @media screen and (max-width: 600px) {
+              .column {
+                width: 100%;
+                display: block;
+                margin-bottom: 20px;
+              }
+            }
+            
+            /* Style the counter cards */
+            .card {
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            
+              padding: 16px;
+              height: 10vh;
+              text-align: center;
+              background-color: navy
+            }
+            </style> -->
+    </head>
+
+    <body>
+        <div class="ajaxbg">
+            <div class="ajaxinner">
+                <h3>You are now being redirected to paypal...</h3>
+                <img src="/images/ajax-loader.gif" alt=""/>
+            </div>
+        </div>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <!-- <div class="navbar-header"> -->
+                    <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button> -->
+                    <!-- <a class="navbar-brand" href="/">CmsShoppingCart</a>
+                    
+                </div> -->
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                            <!-- <li><a href="/">CmsShoppingCart</a></li> -->
+                        <% pages.forEach(function(page){ %>
+                        <% if (page.slug == "home") { %>
+                        <li><a href="/"><%= page.title %></a></li>
+                        <% } else {%>
+                        <li><a href="/<%= page.slug %>"><%= page.title %></a></li>
+                        <% } %>
+                        <% }); %>
+                        <li><a href="/products">Products</a></li>
+                        <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Categories
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                  <% categories.forEach(function(c){ %>
+                                  <a class="dropdown-item" href="/products/<%= c.slug %>"><%= c.title %></a>
+                                  <br>
+                                  <% }); %>
+                                </div>
+                        
+                    </ul>
+                    
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/cart/checkout">Cart (
+                                <% if (typeof cart !== "undefined") { %>
+                                <%= cart.length %>
+                                <% } else {%>
+                                0
+                                <% } %>
+                            )</a>
+                        </li>
+
+                        <% if (user) { %>
+                        <li><a href="/users/logout">Hi, <%= user.username %> ( logout )</a></li>
+                        <% } else {%>
+                        <li><a href="/users/register">Register</a></li>
+                        <li><a href="/users/login">Log in</a></li>
+                        <% } %>
+                        <% if (user && user.admin == 1) { %>
+                        <li><a href="/admin/pages">Admin Area</a></li>
+                        <% }%>
+                        
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+
+        <div class="container">
+            <%- messages('messages', locals) %>
+            
+            <% if (errors) {%>
+                <% errors.forEach(function(error) { %>
+                <div class="alert alert-danger">
+                    <%= error.msg %>
+                </div>
+                <% });%>
+            <% }%>
+            
+            
+            <!-- <div class="row">
+                <div class="column">
+                    <div class="card">
+                        <h3><a href="/products">All Products</a></h3>
+                    </div>
+                </div>
+            <% categories.forEach(function(c){ %>
+                <div class="column">
+                  <div class="card">
+                    <h3><a href="/products/<%= c.slug %>"><%= c.title %></a></h3>
+                  </div>
+                </div>
+                <% }); %>
+            </div> -->
+                
+
+            <!-- <div class="row">
+                <div class="col-xs-12 col-md-3">
+                    <h3>Categories</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="/products">All products</a></li>
+                        <% categories.forEach(function(c){ %>
+                            <li class="list-group-item"><a href="/products/<%= c.slug %>"><%= c.title %></a></li>
+                        <% }); %>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-md-1"></div>
+                <div class="col-xs-12 col-md-8">
+                     -->
+                
+
+
+
+

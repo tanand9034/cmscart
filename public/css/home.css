@@ -1,0 +1,94 @@
+ul.list-group{
+    background-color:white
+}
+
+li.list-group-item{
+    background-color: white
+}
+a{
+    color: white;
+    text-decoration: none;
+
+}
+
+a.dropdown-item{
+    width:300vh;
+    height: 300vh;
+    font-size: 24px;
+    padding: 2px;
+    margin:4px;
+}
+
+.navbar-inverse .navbar-nav > li > a{
+    font-size:20px;
+    color:white;
+    font-synthesis: inherit
+}
+
+.navbar-inverse {
+    height:15vh;
+    background-color:black
+
+}
+
+.navbar-inverse .navbar-brand{
+    color:white;
+    font-size:20px
+
+}
+.navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
+    color:black;
+    
+}
+img{
+    height:10vh;
+    width:300px;
+}
+/* a:hover{
+    color:;
+} */
+/* .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
+    border-color:white;
+} */
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover {
+    color:black;
+}
+
+a.dropdown-item {
+    color: black
+}
+
+a#navbarDropdownMenuLink.nav-link.dropdown-toggle{
+    color:white
+}
+a.dropdown-item{
+    text-decoration: none;
+    text-shadow: 1px 1px brown;
+}
+
+body{
+    background-image: url("https://wallpaperaccess.com/full/1092758.jpg");
+    opacity:0.9;   
+}
+
+div.container{
+    width:1200px;
+}
+
+nav.navbar.navbar-inverse{
+    height:10vh;
+}
+
+h2.description{
+    text-align: center;
+    color: white;
+    text-transform:capitalize;
+    text-shadow:3px 3px brown;
+}
+h3.price{
+    text-align: center;
+    color: white;
+    text-shadow:3px 3px brown;
+}
+
