@@ -6,69 +6,69 @@ li.list-group-item{
     background-color: white
 }
 a{
-    color: white;
+    color: black;
     text-decoration: none;
 
 }
 
 a.dropdown-item{
-    width:300vh;
-    height: 300vh;
-    font-size: 24px;
+    width:100px;
+    height: 10px;
+    font-size: 18px;
     padding: 2px;
     margin:4px;
 }
 
 .navbar-inverse .navbar-nav > li > a{
     font-size:20px;
-    color:white;
+    color:rgb(12, 12, 12);
     font-synthesis: inherit
 }
 
 .navbar-inverse {
     height:15vh;
-    background-color:black
+    background-color:rgb(107, 105, 105);
 
 }
 
 .navbar-inverse .navbar-brand{
-    color:white;
+    color:rgb(10, 10, 10);
     font-size:20px
 
 }
 .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
-    color:black;
+    color:white;
     
 }
 img{
-    height:10vh;
-    width:300px;
+    height:100px;
+    width:100px;
 }
 /* a:hover{
     color:;
 } */
-/* .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
+ .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
     border-color:white;
-} */
+} 
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover {
-    color:black;
+    color:white;
+    background-color: white;
 }
 
 a.dropdown-item {
-    color: black
+    color: rgb(255, 254, 254);
 }
 
 a#navbarDropdownMenuLink.nav-link.dropdown-toggle{
-    color:white
+    color:rgb(5, 5, 5);
 }
 a.dropdown-item{
     text-decoration: none;
-    text-shadow: 1px 1px brown;
+    color: black;
 }
 
 body{
-    background-image: url("https://wallpaperaccess.com/full/1092758.jpg");
     opacity:0.9;   
 }
 
@@ -82,13 +82,18 @@ nav.navbar.navbar-inverse{
 
 h2.description{
     text-align: center;
-    color: white;
-    text-transform:capitalize;
-    text-shadow:3px 3px brown;
+    color: black;
+    font-size: 17px;
+    
 }
 h3.price{
     text-align: center;
-    color: white;
-    text-shadow:3px 3px brown;
+    color: black;
+    
+}
+
+.header-category {
+    width: 70%;
+    margin-left: -50px;
 }
 
