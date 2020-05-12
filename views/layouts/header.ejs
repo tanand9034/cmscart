@@ -25,7 +25,7 @@
                 <img src="/images/ajax-loader.gif" alt=""/>
             </div>
         </div>
-        <nav class="navbar navbar-light navbar-expand-lg fixed-top" style="background-color: #fdcaff70;">
+        <nav class="navbar navbar-light navbar-expand-lg fixed-top" style="background-color: #fdcaff;">
             <a class="navbar-brand" href="/">CmsShoppingCart</a>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <ul class="nav navbar-nav">
@@ -78,7 +78,17 @@
             </div>
           </nav>
 
-        <div class="container">
+        <div class='header-category'>
+            <h5>Categories</h5>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="/products">All products</a></li>
+                <% categories.forEach(function(c){ %>
+                <li class="list-group-item"><a href="/products/<%= c.slug %>"><%= c.title %></a></li>
+                <% }); %>
+            </ul>
+        </div>
+        
+        <div class='main-body'>
             <%- messages('messages', locals) %>
             
             <% if (errors) {%>
@@ -88,36 +98,8 @@
                 </div>
                 <% });%>
             <% }%>
-            
-            
-            <!-- <div class="row">
-                <div class="column">
-                    <div class="card">
-                        <h3><a href="/products">All Products</a></h3>
-                    </div>
-                </div>
-            <% categories.forEach(function(c){ %>
-                <div class="column">
-                  <div class="card">
-                    <h3><a href="/products/<%= c.slug %>"><%= c.title %></a></h3>
-                  </div>
-                </div>
-                <% }); %>
-            </div> -->
                 
-
-             <div class='header-category'>
-                <div class="col-xs-10 col-md-3">
-                    <h5>Categories</h5>
-                    <ul class="list-group">
-                        <li class="list-group-item"><a href="/products">All products</a></li>
-                        <% categories.forEach(function(c){ %>
-                            <li class="list-group-item"><a href="/products/<%= c.slug %>"><%= c.title %></a></li>
-                        <% }); %>
-                    </ul>
-                </div>
-            </div>
-                     
+                 
                 
 
 
