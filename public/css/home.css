@@ -19,6 +19,10 @@ a.dropdown-item{
     margin:4px;
 }
 
+.navbar {
+    position: fixed;
+}
+
 .navbar-inverse .navbar-nav > li > a{
     font-size:20px;
     color:rgb(12, 12, 12);
@@ -72,9 +76,6 @@ body{
     opacity:0.9;   
 }
 
-div.container{
-    width:1200px;
-}
 
 nav.navbar.navbar-inverse{
     height:10vh;
@@ -93,7 +94,20 @@ h3.price{
 }
 
 .header-category {
-    width: 70%;
-    margin-left: -50px;
+    width: 15%;
+    height: 100vh;
+    display: inline-block;
+    margin: 0 20px;
+    float: left;
+    position: fixed;
+    top: 70px;
+}
+
+.main-body {
+    display: inline-block;
+    width: 80%;
+    float: right;
+    top: 85px;
+    position: relative;
 }
 
