@@ -47,7 +47,7 @@
   <h2 style='text-align: center; margin-bottom: 50px;'>Daily needs</h2>
   <!-- cards start -->  
 
-  <% products.forEach(function(p,i){ %>
+  <% products.filter((_, key) => key < 4).forEach(function(p,i){ %>
 
     <% if (i % 4 == 0) { %>
       <div class="row mb20">

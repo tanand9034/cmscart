@@ -122,7 +122,7 @@ router.get('/clear', function (req, res) {
 /*
  * GET buy now
  */
-router.get('/buynow/paypal', function (req, res) {
+router.get('/buynow', function (req, res) {
 
     delete req.session.cart;
 
@@ -130,7 +130,7 @@ router.get('/buynow/paypal', function (req, res) {
 
 });
 
-router.get('/buynow/cod', function (req, res) {
+router.get('/cod', function (req, res) {
 
     delete req.session.cart;
     req.flash('success', 'Order confirmed');

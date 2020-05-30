@@ -67,7 +67,8 @@
 <% }); %>
 <input type="hidden" name="currency_code" value="USD">
 <input type="hidden" name="amount" value="<%= total %>">
-<input type="image" src="http://www.paypal.com/en_US/i/btn/x-click-but01.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+<input id='clickhere' type="image" src="http://www.paypal.com/en_US/i/btn/x-click-but01.gif" name="submit"
+    alt="Make payments with PayPal - it's fast, free and secure!">
 </form>
 
 <% } else {%>
@@ -85,13 +86,10 @@ $(function() {
     
     $('a.buynow').on('click', function (e) {
         e.preventDefault();
-        if($('input[name="radio"]:checked').val()==='cod') {
-            window.location.replace('/cart/buynow/cod')
-        } else {
-            $.get('/cart/buynow/paypal', function () {
-                $('form.pp input[type=image]').click();
-                $('.ajaxbg').show();
-            });
+        if($('input[name="radio"]:checked').val()==='paypal') {
+          $('#clickhere').click();
+        } else {            
+            window.location.replace('/cart/cod')
         }
     });
 
